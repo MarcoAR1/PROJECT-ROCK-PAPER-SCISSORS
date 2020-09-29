@@ -1,1 +1,25 @@
-body { display: inline-block;}
+body {
+    background-color: darkolivegreen;
+    align-content: center;
+    text-align: center;}
+.Tittle {width: 500px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+.counterYou {
+    width: 70px;
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+}
+.gameBody {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+
+}
