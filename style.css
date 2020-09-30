@@ -179,21 +179,7 @@ body {
     -ms-transition: margin 5s ease-out;
     cursor: pointer;
 }
-#ResetGame1 {
-    width: 170px;
-    margin-top: -700px;
-    margin-left: 720px;
-    cursor: pointer;
-    transition: margin 5s ease-out;
-    -webkit-transition: margin 5s ease-out;
-    -moz-transition: margin 5s ease-out;
-    -ms-transition: margin 5s ease-out;
-}
 #ResetGame0:hover {
     width: 300px;
     margin-left: -150px;
-}
-#ResetGame1:hover {
-    width: 300px;
-    margin-left: 750px;
 }

@@ -4,15 +4,15 @@ function SelRock() {
     if (numero<=0) { numero = Math.floor(Math.random() * (2 - -1)) + -1}
     else {numero = Math.floor(Math.random() * (2 - -1)) + -1};
 
-    if (counterGame[0]<3) { if (0<numero) {counterGame[0]++;document.getElementById("PokemonMatchN").src = "imagen/Hoja.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/Fuego.png"}
-    if (0==numero) {document.getElementById("PokemonMatchN").src = "imagen/Fuego.png";document.getElementById("PokemonMatchP").src = "imagen/Fuego.png"}
-    if (0>numero) {counterGame[1]++;document.getElementById("PokemonMatchN").src = "imagen/Agua.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/Fuego.png"}
+    if (counterGame[0]<3) { if (0<numero) {counterGame[0]++;document.getElementById("PokemonMatchN").src = "imagen/HojaHitR.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/FuegoL.png"}
+    if (0==numero) {document.getElementById("PokemonMatchN").src = "imagen/FuegoR.png";document.getElementById("PokemonMatchP").src = "imagen/FuegoL.png"}
+    if (0>numero) {counterGame[1]++;document.getElementById("PokemonMatchN").src = "imagen/AguaR.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/FuegoHitL.png"}
     }
 
     if (counterGame[0]>=3) {document.getElementById("HeartN2").src="imagen/CorazonRoto.png";
     document.getElementById("HeartN1").src="imagen/CorazonVacio.png";counterGame[0]="D";counterGame[1]="L"}
     else if (counterGame[1]>=3) {document.getElementById("HeartP2").src="imagen/CorazonRoto.png";
-    document.getElementById("HeartP1").src="imagen/CorazonVacio.png";counterGame[1]="D";counterGame[0]="L";document.getElementById("PokemonMatchN").src = "imagen/Agua.png"};
+    document.getElementById("HeartP1").src="imagen/CorazonVacio.png";counterGame[1]="D";counterGame[0]="L";document.getElementById("PokemonMatchN").src = "imagen/AguaR.png"};
     alCounter();
 };
 function SelPaper() {
@@ -20,16 +20,16 @@ function SelPaper() {
     if (numero<=0) { numero = Math.floor(Math.random() * (2 - -1)) + -1}
     else {numero = Math.floor(Math.random() * (2 - -1)) + -1};
 
-        if (counterGame[0]<3) { if (0<numero) {counterGame[0]++;document.getElementById("PokemonMatchN").src = "imagen/Agua.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/Hoja.png"}
-                if (0==numero) {document.getElementById("PokemonMatchN").src = "imagen/Hoja.png";document.getElementById("PokemonMatchP").src = "imagen/Hoja.png"}
-                if (0>numero) {counterGame[1]++;document.getElementById("PokemonMatchN").src = "imagen/Fuego.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/Hoja.png"}
+        if (counterGame[0]<3) { if (0<numero) {counterGame[0]++;document.getElementById("PokemonMatchN").src = "imagen/AguaHitR.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/HojaL.png"}
+                if (0==numero) {document.getElementById("PokemonMatchN").src = "imagen/HojaR.png";document.getElementById("PokemonMatchP").src = "imagen/HojaL.png"}
+                if (0>numero) {counterGame[1]++;document.getElementById("PokemonMatchN").src = "imagen/FuegoR.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/HojaHitL.png"}
                               }
         if (counterGame[0]>=3) {
             document.getElementById("HeartN2").src="imagen/CorazonRoto.png";
             document.getElementById("HeartN1").src="imagen/CorazonVacio.png";counterGame[0]="D";counterGame[1]="L"}
         else if (counterGame[1]>=3) {
             document.getElementById("HeartP2").src="imagen/CorazonRoto.png";
-            document.getElementById("HeartP1").src="imagen/CorazonVacio.png";counterGame[1]="D";counterGame[0]="L";document.getElementById("PokemonMatchN").src = "imagen/Fuego.png"};
+            document.getElementById("HeartP1").src="imagen/CorazonVacio.png";counterGame[1]="D";counterGame[0]="L";document.getElementById("PokemonMatchN").src = "imagen/FuegoR.png"};
             alCounter();
 };
 function SelScissor() {
@@ -37,15 +37,15 @@ function SelScissor() {
     if (numero<=0) { numero = Math.floor(Math.random() * (2 - -1)) + -1}
     else {numero = Math.floor(Math.random() * (2 - -1)) + -1};
 
-    if (counterGame[0]<3) { if (0<numero) {counterGame[0]++;document.getElementById("PokemonMatchN").src = "imagen/Fuego.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/Agua.png"}
-                            if (0==numero) {document.getElementById("PokemonMatchN").src = "imagen/Agua.png";document.getElementById("PokemonMatchP").src = "imagen/Agua.png"}
-                            if (0>numero) {counterGame[1]++;document.getElementById("PokemonMatchN").src = "imagen/Hoja.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/Agua.png"}
+    if (counterGame[0]<3) { if (0<numero) {counterGame[0]++;document.getElementById("PokemonMatchN").src = "imagen/FuegoHitR.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/AguaL.png"}
+                            if (0==numero) {document.getElementById("PokemonMatchN").src = "imagen/AguaR.png";document.getElementById("PokemonMatchP").src = "imagen/AguaL.png"}
+                            if (0>numero) {counterGame[1]++;document.getElementById("PokemonMatchN").src = "imagen/HojaR.png";Gamecounter();document.getElementById("PokemonMatchP").src = "imagen/AguaHitL.png"}
                             }
 
     if (counterGame[0]>=3) {document.getElementById("HeartN2").src="imagen/CorazonRoto.png";
     document.getElementById("HeartN1").src="imagen/CorazonVacio.png";counterGame[0]="D";counterGame[1]="L"}
     else if (counterGame[1]>=3) {document.getElementById("HeartP2").src="imagen/CorazonRoto.png";
-    document.getElementById("HeartP1").src="imagen/CorazonVacio.png";counterGame[1]="D";counterGame[0]="L";document.getElementById("PokemonMatchN").src = "imagen/Hoja.png"};
+    document.getElementById("HeartP1").src="imagen/CorazonVacio.png";counterGame[1]="D";counterGame[0]="L";document.getElementById("PokemonMatchN").src = "imagen/HojaR.png"};
     alCounter();
 };
 function alCounter() {
@@ -53,12 +53,10 @@ function alCounter() {
     if (counterGame[0]=="L") {
         document.getElementById("BattleBegins").src = "imagen/YouLose.png";
         document.getElementById("ResetGame0").src = "imagen/Reset.png";
-        document.getElementById("ResetGame1").src = "imagen/Reset.png"
     }
     else if (counterGame[0]=="D") {
         document.getElementById("BattleBegins").src = "imagen/YouWin.png";
         document.getElementById("ResetGame0").src = "imagen/Reset.png";
-        document.getElementById("ResetGame1").src = "imagen/Reset.png"
     };
 }
 function Gamecounter() {
@@ -85,11 +83,9 @@ function gameReset () {
         document.getElementById("HeartN2").src="imagen/Corazon.png";
         document.getElementById("BattleBegins").src = "imagen/TheBattleBegins.png";
         document.getElementById("ResetGame0").src = "";
-        document.getElementById("ResetGame1").src = "";
     }
 }
 document.getElementById("Rock").onclick = SelRock
 document.getElementById("Paper").onclick = SelPaper
 document.getElementById("Scissor").onclick = SelScissor
 document.getElementById("ResetGame0").onclick = gameReset
-document.getElementById("ResetGame1").onclick = gameReset
