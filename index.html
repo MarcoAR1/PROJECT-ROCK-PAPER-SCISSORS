@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissor</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/imagen/Principalicono.png" type="image.png">
 
 </head>
-<body>
-    <div class="Tittle"><h1 class="onTittle">Fire,Water or Leaf</h1></div>
+<body>      
 <div class="gameBody"> 
+    <div class="Tittle"><img class="onTittle" src="imagen/FireWaterHoja.png"></div>
     <div class="BarLife">
-            <div class="BarLifeP1"> <img id="Heart0" class="BarLifeP11" src="imagen/Corazon.png"><img id="Heart1" class="BarLifeP1" src="imagen/Corazon.png"><img id="Heart2" class="BarLifeP1" src="imagen/Corazon.png"></div>
-            <div class="BarLifeP2"> <img id="Heart00" class="BarLifeP21" src="imagen/Corazon.png"><img id="Heart01" class="BarLifeP2" src="imagen/Corazon.png"><img id="Heart02" class="BarLifeP2" src="imagen/Corazon.png"></div>
+            <div class="BarLifeP1"> <img id="HeartP2" class="BarLifeP11" src="imagen/Corazon.png"><img id="HeartP1" class="BarLifeP1" src="imagen/Corazon.png"><img id="HeartP0" class="BarLifeP1" src="imagen/Corazon.png"></div>
+            <div class="BarLifeP2"> <img id="HeartN0" class="BarLifeP21" src="imagen/Corazon.png"><img id="HeartN1" class="BarLifeP2" src="imagen/Corazon.png"><img id="HeartN2" class="BarLifeP2" src="imagen/Corazon.png"></div>
     </div>
     <div class="BarButton">
             <div class="BarButtonP" id="BarButtonP">
-                    <p class="Rock" id="Rock"> <img class="BarButtonF1" src="imagen/Fuego.png"> </p>
-                    <p class="Paper" id="Paper"> <img class="BarButtonF" src="imagen/Hoja.png"> </p>
-                    <p class="Scissor" id="Scissor"> <img class="BarButtonF" src="imagen/Agua.png"></p>
+                    <p class="Rock"> <img  id="Rock" class="BarButtonF1" src="imagen/Fuego.png"> </p>
+                    <p class="Paper" > <img id="Paper" class="BarButtonF" src="imagen/Hoja.png"> </p>
+                    <p class="Scissor" > <img id="Scissor" class="BarButtonF" src="imagen/Agua.png"></p>
            </div>
             <div class="BarButtonN" id="BarButton">
                     <p class="Rock"> <img class="BarButtonFn1" src="imagen/Fuego.png"> </p>
@@ -27,22 +28,17 @@
             </div>
     </div>
     <div class="MatchVersus">
-        <p class="MatchMessage" id="Message"></p>
+        <p class="MatchMessage"><img id="BattleBegins" src="imagen/TheBattleBegins.png" class="BattleBegins"></p>
         <div class="PokeSide">
         <p> <img id="PokemonMatchP" class="PokemonMatchP" src=""> </p>
         <p> <img id="PokemonMatchN" class="PokemonMatchN" src=""> </p>
         </div>
-
-
     </div>
-    <div class="Counter">
-        <p id="counterYou">contador</p>
-        <p id="counterNPC">contador</p>
+    <div>
+        <img id="ResetGame0" src="">
+        <img id="ResetGame1" src="">
     </div>
-    <div id=GameLow>
-        <p id="Versus"></p>
-        <button id="Stard">Reset</button>
-</div></div>
+</div>
     
     
 </body>
