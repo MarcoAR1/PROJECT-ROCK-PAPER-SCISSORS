@@ -8,24 +8,41 @@
 
 </head>
 <body>
-    <div class="Tittle"><h1 class="onTittle">Rock Paper Scissor</h1></div>
-    <div class="gameBody">
-    <div id="BarButton">
-        <button id="Rock">Rock</button>
-        <button id="Paper">Paper</button>
-        <button id="Scissor">Scissor</button>
+    <div class="Tittle"><h1 class="onTittle">Fire,Water or Leaf</h1></div>
+<div class="gameBody"> 
+    <div class="BarLife">
+            <div class="BarLifeP1"> <img id="Heart0" class="BarLifeP11" src="imagen/Corazon.png"><img id="Heart1" class="BarLifeP1" src="imagen/Corazon.png"><img id="Heart2" class="BarLifeP1" src="imagen/Corazon.png"></div>
+            <div class="BarLifeP2"> <img id="Heart00" class="BarLifeP21" src="imagen/Corazon.png"><img id="Heart01" class="BarLifeP2" src="imagen/Corazon.png"><img id="Heart02" class="BarLifeP2" src="imagen/Corazon.png"></div>
+    </div>
+    <div class="BarButton">
+            <div class="BarButtonP" id="BarButtonP">
+                    <p class="Rock" id="Rock"> <img class="BarButtonF1" src="imagen/Fuego.png"> </p>
+                    <p class="Paper" id="Paper"> <img class="BarButtonF" src="imagen/Hoja.png"> </p>
+                    <p class="Scissor" id="Scissor"> <img class="BarButtonF" src="imagen/Agua.png"></p>
+           </div>
+            <div class="BarButtonN" id="BarButton">
+                    <p class="Rock"> <img class="BarButtonFn1" src="imagen/Fuego.png"> </p>
+                    <p class="Paper"> <img class="BarButtonFn" src="imagen/Hoja.png"> </p>
+                    <p class="Scissor"> <img class="BarButtonFn" src="imagen/Agua.png"> </p>
+            </div>
+    </div>
+    <div class="MatchVersus">
+        <p class="MatchMessage" id="Message"></p>
+        <div class="PokeSide">
+        <p> <img id="PokemonMatchP" class="PokemonMatchP" src=""> </p>
+        <p> <img id="PokemonMatchN" class="PokemonMatchN" src=""> </p>
+        </div>
+
 
     </div>
-    <div class="Counter"><p id="counterYou">contador</p>
+    <div class="Counter">
+        <p id="counterYou">contador</p>
         <p id="counterNPC">contador</p>
     </div>
     <div id=GameLow>
         <p id="Versus"></p>
-        <p id="Message"></p>
-        <button id="Stard">Stard Game</button>
-    </div>
-
-    </div>
+        <button id="Stard">Reset</button>
+</div></div>
     
     
 </body>

@@ -1,25 +1,149 @@
 body {
-    background-color: darkolivegreen;
+    background-image: url(imagen/Fondo.jpg);
     align-content: center;
-    text-align: center;}
-.Tittle {width: 500px;
-    background-color: aqua;
+    text-align: center;
+    background-size: cover;
+    display: block;
+}
+
+.Tittle {
+    width: 500px;
+    background-color: red;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
 }
 .counterYou {
     width: 70px;
-    background-color: aqua;
     margin-left: auto;
     margin-right: auto;
 }
 .gameBody {
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
+    align-content: center;
+    text-align: center;
+    max-width: 1920px;
+    max-height: 1080px;
+    width: auto;
+    height: auto;}
+/* Life bar below*/
+.BarLife {width: 800px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .BarLifeP11 {
+        width: 50px;
+        display: flex;
+        margin-right: auto;
+        margin-left: 100px;
+    }
+    .BarLifeP1 {
+        width: 50px;
+        display: flex;
+        margin-right: auto;
+    }
+    .BarLifeP2 {
+       width: 50px;
+       display: flex;
+    }
+    .BarLifeP21 {
+        width: 50px;
+        display: flex;
+        margin-left: -200px;}
+    /* Life bar above*/
+/* where are the pokemons*/
+.BarButton {
+    width: 980px;
+    height: 400px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+}
+    .BarButtonP {
     width: 500px;
-    height: 500px;
-    margin-top: 50px;
+    display: flex;
+    background-image: url(imagen/Marco.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
+}
+    .BarButtonN {
+    display: flex;
+    width: 500px;
+    background-image: url(imagen/NpcMarco.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+    .BarButtonF1 {
+    height: 70px;
+    margin-top: 130px;
+    margin-left: 125px;
+}
+    .BarButtonF {
+    height: 70px;
+    margin-top: 125px;
+}
+    .BarButtonFn1 {
+    height: 70px;
+    margin-top: 130px;
+    margin-left: 125px;
+}
+    .BarButtonFn {
+    height: 70px;
+    margin-top: 145px;}
+/* Pokemon above*/
+.MatchVersus {
+    position: static;
+    text-align: center;
+    -webkit-text-size-adjust: auto;
+    display: flex;
+    margin-top: -120px;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 440px;
+    background-image: url(imagen/MatchVS.png);
+    background-repeat: no-repeat;
+    background-size: 490px;
+    flex-wrap: nowrap;
+}
+    .MatchMessage {
+    max-height: 50px;
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: auto;
+    display: block;
+}
+    .PokeSide {
+        display: flex;
+        align-self: center;
+        position: absolute;
+        width: 500px;
+        height: 150px;
+        margin-top: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .PokemonMatchP {
+    height: 100px;
+    position: absolute;
+    margin-left: 78px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+    .PokemonMatchN {
+    position: absolute;
+    height: 100px;
+    margin-left: 330px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
