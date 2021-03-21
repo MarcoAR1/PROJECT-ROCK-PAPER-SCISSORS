@@ -71,15 +71,20 @@ function alCounter() {
   } else if (countplayers === "W") {
     blockinfo.src = "imagen/YouWin.png";
     resetGame.src = "imagen/Reset.png";
-  } else {
-    blockinfo.src = "imagen/NextRound.png";
   }
 }
 
 let oldcountnpcs = 0;
 let oldcountplayers = 0;
 function Gamecounter() {
-  if (oldcountplayers !== countplayers) {
+  if (countplayers === 1 || countnpcs === 1) {
+    blockinfo.src = "imagen/NextRound.png";
+  }
+  if (
+    oldcountplayers !== countplayers &&
+    countplayers != "L" &&
+    countplayers != "W"
+  ) {
     oldcountplayers = countplayers;
     for (let x = 1; x < countplayers + 1; x += 1) {
       if (x > 3) {
@@ -96,7 +101,9 @@ function Gamecounter() {
       }
     }
     setTimeout(() => {
-      for (let x = 1; x < countplayers + 1; x += 1) {
+      let currentCount =
+        typeof countplayers === typeof "Hello" ? 3 : countplayers;
+      for (let x = 1; x < currentCount + 1; x += 1) {
         if (x > 3) {
           break;
         }
@@ -104,7 +111,11 @@ function Gamecounter() {
       }
     }, 400);
   }
-  if (oldcountnpcs !== countnpcs) {
+  if (
+    oldcountnpcs !== countnpcs &&
+    countplayers != "L" &&
+    countplayers != "W"
+  ) {
     oldcountnpcs = countnpcs;
     for (let x = 1; x < countnpcs + 1; x += 1) {
       if (x > 3) {
