@@ -1,45 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="/imagen/Principalicono.png" type="image.png">
-
-</head>
-<body>      
-<div class="gameBody"> 
-    <div class="Tittle"><img class="onTittle" src="imagen/FireWaterHoja.png"></div>
-    <div class="BarLife">
-            <div class="BarLifeP1"> <img id="HeartP2" class="BarLifeP11" src="imagen/Corazon.png"><img id="HeartP1" class="BarLifeP1" src="imagen/Corazon.png"><img id="HeartP0" class="BarLifeP1" src="imagen/Corazon.png"></div>
-            <div class="BarLifeP2"> <img id="HeartN0" class="BarLifeP21" src="imagen/Corazon.png"><img id="HeartN1" class="BarLifeP2" src="imagen/Corazon.png"><img id="HeartN2" class="BarLifeP2" src="imagen/Corazon.png"></div>
-    </div>
-    <div class="BarButton">
-            <div class="BarButtonP" id="BarButtonP">
-                    <p class="Rock"> <img  id="Rock" class="BarButtonF1" src="imagen/FuegoL.png"> </p>
-                    <p class="Paper" > <img id="Paper" class="BarButtonF" src="imagen/HojaL.png"> </p>
-                    <p class="Scissor" > <img id="Scissor" class="BarButtonF" src="imagen/AguaL.png"></p>
-           </div>
-            <div class="BarButtonN" id="BarButton">
-                    <p class="Rock"> <img class="BarButtonFn1" src="imagen/FuegoR.png"> </p>
-                    <p class="Paper"> <img class="BarButtonFn" src="imagen/HojaR.png"> </p>
-                    <p class="Scissor"> <img class="BarButtonFn" src="imagen/AguaR.png"> </p>
-            </div>
-    </div>
-    <div class="MatchVersus">
-        <p class="MatchMessage"><img id="BattleBegins" src="imagen/TheBattleBegins.png" class="BattleBegins"></p>
-        <div class="PokeSide">
-        <p> <img id="PokemonMatchP" class="PokemonMatchP" src=""> </p>
-        <p> <img id="PokemonMatchN" class="PokemonMatchN" src=""> </p>
+    <link rel="stylesheet" href="./css/normalice.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="/imagen/Principalicono.png"
+      type="image.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-tittle">
+        <img class="container-tittle-img" src="imagen/FireWaterHoja.png" />
+      </div>
+      <div class="container-barlife">
+        <div class="container-barlife-pj">
+          <img
+            id="container-barlife-pj-heart-3"
+            class="container-barlife-pj-img"
+            src="imagen/Corazon.png"
+          />
+          <img
+            id="container-barlife-pj-heart-2"
+            class="container-barlife-pj-img"
+            src="imagen/Corazon.png"
+          />
+          <img
+            id="container-barlife-pj-heart-1"
+            class="container-barlife-pj-img"
+            src="imagen/Corazon.png"
+          />
         </div>
+        <div class="container-barlife-npc">
+          <img
+            id="container-barlife-npc-heart-1"
+            class="container-barlife-npc-img"
+            src="imagen/Corazon.png"
+          />
+          <img
+            id="container-barlife-npc-heart-2"
+            class="container-barlife-npc-img"
+            src="imagen/Corazon.png"
+          />
+          <img
+            id="container-barlife-npc-heart-3"
+            class="container-barlife-npc-img"
+            src="imagen/Corazon.png"
+          />
+        </div>
+      </div>
+      <div class="container-barbutton">
+        <div class="container-barbutton-pj" id="container-barbutton-pj">
+          <img
+            class="container-barbutton-pj-background"
+            src="./imagen/Marco.png"
+            alt=""
+          />
+          <img
+            class="container-barbutton-pj-img"
+            id="container-barbutton-pj-fire"
+            src="imagen/FuegoL.png"
+          />
+
+          <img
+            class="container-barbutton-pj-img"
+            id="container-barbutton-pj-leaf"
+            src="imagen/HojaL.png"
+          />
+
+          <img
+            class="container-barbutton-pj-img"
+            id="container-barbutton-pj-water"
+            src="imagen/AguaL.png"
+          />
+        </div>
+        <div class="container-message">
+          <img
+            id="container-message-start"
+            src="imagen/TheBattleBegins.png"
+            class="container-message-img"
+          />
+        </div>
+        <div class="container-barbutton-npc" id="container-barbutton-npc">
+          <img
+            class="container-barbutton-npc-background"
+            src="./imagen/NpcMarco.png"
+            alt=""
+          />
+          <img class="container-barbutton-npc-img" src="imagen/FuegoL.png" />
+          <img class="container-barbutton-npc-img" src="imagen/HojaL.png" />
+          <img class="container-barbutton-npc-img" src="imagen/AguaL.png" />
+        </div>
+      </div>
+      <div class="container-match">
+        <div class="container-match-battlefield">
+          <div class="container-match-battlefield-background">
+            <div class="container-resetgame">
+              <img
+                class="container-resetgame-img"
+                id="container-resetgame-img"
+                src=""
+              />
+            </div>
+            <div class="container-match-battlefield-slelect">
+              <div class="container-match-battlefield-pj">
+                <img
+                  id="container-match-battlefield-pj"
+                  class="container-match-battlefield-img"
+                  src=""
+                />
+              </div>
+              <div class="container-match-battlefield-npc">
+                <img
+                  id="container-match-battlefield-npc"
+                  class="container-match-battlefield-img"
+                  src=""
+                />
+              </div>
+            </div>
+            <img
+              class="container-match-battlefield-background-img"
+              src="./imagen/MatchVS.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
     </div>
-    <div>
-        <img id="ResetGame0" src="">
-    </div>
-</div>
-    
-    
-</body>
-<script src="script/main.js"></script>
+  </body>
+  <script src="script/main.js"></script>
 </html>

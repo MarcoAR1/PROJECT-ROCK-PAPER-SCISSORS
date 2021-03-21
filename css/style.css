@@ -1,0 +1,203 @@
+body {
+  background-image: url(../imagen/Fondo.jpg);
+  background-size: auto;
+}
+
+.container {
+  display: block;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.container-tittle {
+  margin: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.container-tittle-img {
+  position: absolute;
+  width: 20rem;
+  height: 13rem;
+  margin-top: -2.2rem;
+}
+
+/* bar Life */
+.container-barlife {
+  display: flex;
+  margin: 0 auto;
+  width: 68%;
+  height: 10%;
+}
+.container-barlife-pj,
+.container-barlife-npc {
+  display: flex;
+  padding: 0 20px;
+}
+.container-barlife-pj {
+  margin-right: auto;
+}
+.container-barlife-npc {
+  margin-left: auto;
+}
+.container-barlife-pj-img,
+.container-barlife-npc-img {
+  width: 3rem;
+  height: 3rem;
+}
+/* select personaje */
+
+.container-barbutton {
+  display: flex;
+  padding: 5rem;
+}
+.container-barbutton-pj,
+.container-barbutton-npc {
+  display: flex;
+}
+.container-barbutton-pj {
+  margin-right: auto;
+}
+.container-barbutton-npc {
+  margin-left: auto;
+}
+.container-barbutton-pj-img {
+  cursor: pointer;
+}
+.container-barbutton-pj-img:hover {
+  transform: scale(1.5);
+  z-index: 600;
+}
+.container-barbutton-npc-img {
+  transform: scaleX(-1);
+}
+
+.container-barbutton-pj-img,
+.container-barbutton-npc-img {
+  width: 6rem;
+  z-index: 500;
+}
+.container-barbutton-npc-background,
+.container-barbutton-pj-background {
+  position: absolute;
+}
+.container-barbutton-npc-background {
+  margin-left: -8rem;
+  margin-top: -11.5rem;
+}
+.container-barbutton-pj-background {
+  margin-left: -7.3rem;
+  margin-top: -10.5rem;
+}
+/* counter message */
+.container-message {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+}
+.container-message-img {
+  width: 9rem;
+  margin-top: -2rem;
+}
+/* Field Battle */
+.container-match {
+  display: flex;
+  justify-content: center;
+}
+.container-match-battlefield {
+  display: flex;
+}
+.container-match-battlefield-img {
+  width: 8rem;
+}
+.container-match-battlefield-slelect {
+  display: flex;
+  width: 39rem;
+  margin-top: 19rem;
+  position: absolute;
+  padding: 0 0 0 3rem;
+}
+.container-match-battlefield-npc,
+.container-match-battlefield-pj {
+  width: 10rem;
+}
+.container-match-battlefield-npc {
+  transform: scaleX(-1);
+}
+.container-match-battlefield-npc {
+  margin-right: auto;
+}
+.container-match-battlefield-pj {
+  margin-right: auto;
+}
+.container-resetgame {
+  display: flex;
+  justify-content: center;
+  width: 550px;
+  height: 20%;
+  position: absolute;
+}
+.container-resetgame-img {
+  width: 15rem;
+  z-index: 400;
+}
+.container-resetgame-img:hover {
+  cursor: pointer;
+  overflow: hidden;
+  transform: scale(1.5);
+  z-index: 600;
+}
+
+/* responsive  media*/
+
+@media screen and (max-width: 1200px) {
+  .container-barbutton-npc-background,
+  .container-barbutton-pj-background {
+    display: none;
+  }
+  .container-message {
+    display: block;
+    margin-top: -10rem;
+  }
+  .container-match {
+    margin-top: -23.62rem;
+  }
+  .container-barbutton-pj,
+  .container-barbutton-npc {
+    border: 0.5rem solid black;
+    display: grid;
+  }
+  .container-tittle-img {
+    position: static;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .container-tittle {
+    display: block;
+  }
+  .container-tittle-img {
+    margin-left: 16.5rem;
+  }
+
+  .container-barlife {
+    padding: 0 10.2rem;
+  }
+  .container-message {
+    width: 144px;
+  }
+  .container-barlife-npc {
+    margin-left: 199px;
+  }
+  .container-barlife-pj {
+    margin-right: 50px;
+  }
+  .container-barbutton-pj {
+    margin-right: 195px;
+  }
+  .container-barbutton-npc {
+    margin-left: 211px;
+  }
+  .container-match {
+    justify-content: unset;
+    padding: 0 12rem;
+  }
+}
