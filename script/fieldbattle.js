@@ -1,5 +1,4 @@
 import { counterGame, heartnpc, heartpj } from "./counter.js";
-import { fire, leaf, water, resetGame } from "./main.js";
 import {
   index,
   corazon,
@@ -8,56 +7,62 @@ import {
   blockinfo,
   npc,
   pj,
+  element,
 } from "./choise.js";
-export { SelectionFire, SelectionWater, SelectionLeaf, gameReset };
+export { selections, gameReset };
+const { Fire, Leaf, Water } = element;
+const { resetGame } = index;
 let { countplayer, countnpc } = counterGame;
 let countplayers = countplayer[0];
 let countnpcs = countnpc[0];
-function SelectionFire() {
-  let numero = Math.floor(Math.random() * (2 - -1)) + -1;
-  if (countplayers < 3) {
-    if (0 < numero) {
-      countnpcs += 1;
-      changeimage("Fire", "Leaf", pj);
-    } else if (0 == numero) {
-      changeimage("Fire", "Fire");
-    } else {
-      countplayers += 1;
-      changeimage("Fire", "Water", npc);
+
+const selections = {
+  SelectionFire: function SelectionFire() {
+    let numero = Math.floor(Math.random() * (2 - -1)) + -1;
+    if (countplayers < 3) {
+      if (0 < numero) {
+        countnpcs += 1;
+        changeimage("Fire", "Leaf", pj);
+      } else if (0 == numero) {
+        changeimage("Fire", "Fire");
+      } else {
+        countplayers += 1;
+        changeimage("Fire", "Water", npc);
+      }
     }
-  }
-  Gamecounter();
-}
-function SelectionLeaf() {
-  let numero = Math.floor(Math.random() * (2 - -1)) + -1;
-  if (countplayers < 3) {
-    if (0 < numero) {
-      countnpcs += 1;
-      changeimage("Leaf", "Water", pj);
-    } else if (0 == numero) {
-      changeimage("Leaf", "Leaf");
-    } else {
-      countplayers += 1;
-      changeimage("Leaf", "Fire", npc);
+    Gamecounter();
+  },
+  SelectionLeaf: function SelectionLeaf() {
+    let numero = Math.floor(Math.random() * (2 - -1)) + -1;
+    if (countplayers < 3) {
+      if (0 < numero) {
+        countnpcs += 1;
+        changeimage("Leaf", "Water", pj);
+      } else if (0 == numero) {
+        changeimage("Leaf", "Leaf");
+      } else {
+        countplayers += 1;
+        changeimage("Leaf", "Fire", npc);
+      }
     }
-  }
-  Gamecounter();
-}
-function SelectionWater() {
-  let numero = Math.floor(Math.random() * (2 - -1)) + -1;
-  if (countplayers < 3) {
-    if (0 < numero) {
-      countnpcs += 1;
-      changeimage("Water", "Fire", pj);
-    } else if (0 == numero) {
-      changeimage("Water", "Water");
-    } else {
-      countplayers += 1;
-      changeimage("Water", "Leaf", npc);
+    Gamecounter();
+  },
+  SelectionWater: function SelectionWater() {
+    let numero = Math.floor(Math.random() * (2 - -1)) + -1;
+    if (countplayers < 3) {
+      if (0 < numero) {
+        countnpcs += 1;
+        changeimage("Water", "Fire", pj);
+      } else if (0 == numero) {
+        changeimage("Water", "Water");
+      } else {
+        countplayers += 1;
+        changeimage("Water", "Leaf", npc);
+      }
     }
-  }
-  Gamecounter();
-}
+    Gamecounter();
+  },
+};
 
 function alCounter() {
   if (countplayers === "L") {
@@ -140,16 +145,16 @@ function changeimage(poke, pokem, tog) {
   pj.src = choise[0];
   npc.src = choise[1];
   if (tog) {
-    fire.removeEventListener("click", SelectionFire);
-    leaf.removeEventListener("click", SelectionLeaf);
-    water.removeEventListener("click", SelectionWater);
+    for (let x in element) {
+      element[x].removeEventListener("click", selections[`Selection${x}`]);
+    }
     tog.classList.toggle("hitpj");
     setTimeout(() => {
       tog.src = choise[3];
       tog.classList.toggle("hitpj");
-      fire.addEventListener("click", SelectionFire);
-      leaf.addEventListener("click", SelectionLeaf);
-      water.addEventListener("click", SelectionWater);
+      for (let x in element) {
+        element[x].addEventListener("click", selections[`Selection${x}`]);
+      }
     }, 1700);
   }
 }

@@ -73,9 +73,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
-.container-barbutton-pj-img:hover {
-  transform: scale(1.5);
-}
 .container-barbutton-npc-background {
   margin-left: -7.5rem;
   margin-top: -11.7rem;

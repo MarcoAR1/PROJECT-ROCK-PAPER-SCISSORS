@@ -1,4 +1,14 @@
-export { index, corazon, corazonVacio, corazonRoto, blockinfo, npc, pj };
+export {
+  index,
+  corazon,
+  corazonVacio,
+  corazonRoto,
+  blockinfo,
+  npc,
+  pj,
+  element,
+  actions,
+};
 const blockinfo = document.getElementById("container-message-start");
 const npc = document.getElementById("container-match-battlefield-npc");
 const pj = document.getElementById("container-match-battlefield-pj");
@@ -47,5 +57,21 @@ const index = {
   WaterWater: {
     0: "imagen/Vaporeon.gif",
     1: "imagen/Vaporeon.gif",
+  },
+  resetGame: document.getElementById("container-resetgame-img"),
+};
+const element = {
+  Fire: document.getElementById("container-barbutton-pj-fire"),
+  Leaf: document.getElementById("container-barbutton-pj-leaf"),
+  Water: document.getElementById("container-barbutton-pj-water"),
+};
+const actions = {
+  baseImg: "",
+  mouseover: (target, element) => {
+    actions.baseImg = target.src;
+    target.src = `imagen/${element}Selection.gif`;
+  },
+  mouseout: (target) => {
+    target.src = actions.baseImg;
   },
 };

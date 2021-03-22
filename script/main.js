@@ -1,16 +1,18 @@
-import {
-  SelectionFire,
-  SelectionWater,
-  SelectionLeaf,
-  gameReset,
-} from "./fieldbattle.js";
-export { fire, leaf, water,resetGame };
-const resetGame = document.getElementById("container-resetgame-img");
-const fire = document.getElementById("container-barbutton-pj-fire");
-const leaf = document.getElementById("container-barbutton-pj-leaf");
-const water = document.getElementById("container-barbutton-pj-water");
-resetGame.onclick = gameReset;
+import { selections, gameReset } from "./fieldbattle.js";
+import { element, actions, index } from "./choise.js";
+const { resetGame } = index;
 
-fire.addEventListener("click", SelectionFire);
-leaf.addEventListener("click", SelectionLeaf);
-water.addEventListener("click", SelectionWater);
+for (let x in element) {
+  element[x].addEventListener("click", selections[`Selection${x}`]);
+}
+for (let x in element) {
+  element[x].addEventListener("mouseover", () => {
+    actions.mouseover(element[x], x);
+    console.log(actions.baseImg);
+  });
+}
+for (let x in element) {
+  element[x].addEventListener("mouseout", () => actions.mouseout(element[x]));
+}
+
+resetGame.onclick = gameReset;
