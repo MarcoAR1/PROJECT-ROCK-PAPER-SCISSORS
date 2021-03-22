@@ -64,14 +64,25 @@ body {
   cursor: pointer;
   transform: scaleX(-1);
 }
-.container-barbutton-pj-img,
-.container-barbutton-npc-img {
-  padding: 0 1rem;
-  z-index: 500;
+.container-barbutton-all-img-all {
+  display: flex;
+  justify-content: center;
   background-image: url("../imagen/Marco.png");
   background-size: 4rem;
   background-position: center;
   background-repeat: no-repeat;
+  width: 6rem;
+  height: 5rem;
+  margin: 0.1rem 0.5rem;
+}
+.container-barbutton-pj-img,
+.container-barbutton-npc-img {
+  z-index: 600;
+}
+.container-barbutton-pj-img:hover {
+  position: absolute;
+  margin-top: -5rem;
+  z-index: 200;
 }
 .container-barbutton-npc-background {
   margin-left: -7.5rem;
