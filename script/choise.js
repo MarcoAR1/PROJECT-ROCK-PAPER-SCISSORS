@@ -18,11 +18,11 @@ const index = {
   },
   FireLeaf: {
     0: "imagen/FlareonHit.gif",
-    1: "imagen/Lefeon.gif",
+    1: "imagen/Lafeon.gif",
     3: "imagen/Flareon.gif",
   },
   LeafFire: {
-    0: "imagen/Lefeon.gif",
+    0: "imagen/Lafeon.gif",
     1: "imagen/FlareonHit.gif",
     3: "imagen/Flareon.gif",
   },
@@ -31,18 +31,18 @@ const index = {
     1: "imagen/Flareon.gif",
   },
   LeafWater: {
-    0: "imagen/LefeonHit.gif",
+    0: "imagen/LafeonHit.gif",
     1: "imagen/Vaporeon.gif",
-    3: "imagen/Lefeon.gif",
+    3: "imagen/Lafeon.gif",
   },
   WaterLeaf: {
     0: "imagen/Vaporeon.gif",
-    1: "imagen/LefeonHit.gif",
-    3: "imagen/Lefeon.gif",
+    1: "imagen/LafeonHit.gif",
+    3: "imagen/Lafeon.gif",
   },
   LeafLeaf: {
-    0: "imagen/Lefeon.gif",
-    1: "imagen/Lefeon.gif",
+    0: "imagen/Lafeon.gif",
+    1: "imagen/Lafeon.gif",
   },
   WaterWater: {
     0: "imagen/Vaporeon.gif",
