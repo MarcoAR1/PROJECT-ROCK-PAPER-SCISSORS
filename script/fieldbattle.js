@@ -1,132 +1,59 @@
 import { counterGame, heartnpc, heartpj } from "./counter.js";
-import { fire, leaf, water } from "./main.js";
-let { countplayer, countnpc } = counterGame;
+import { fire, leaf, water, resetGame } from "./main.js";
+import {
+  index,
+  corazon,
+  corazonVacio,
+  corazonRoto,
+  blockinfo,
+  npc,
+  pj,
+} from "./choise.js";
 export { SelectionFire, SelectionWater, SelectionLeaf, gameReset };
-const resetGame = document.getElementById("container-resetgame-img");
-const blockinfo = document.getElementById("container-message-start");
-const npc = document.getElementById("container-match-battlefield-npc");
-const pj = document.getElementById("container-match-battlefield-pj");
+let { countplayer, countnpc } = counterGame;
 let countplayers = countplayer[0];
 let countnpcs = countnpc[0];
 function SelectionFire() {
   let numero = Math.floor(Math.random() * (2 - -1)) + -1;
-  fire.removeEventListener("click", SelectionFire);
-  leaf.removeEventListener("click", SelectionLeaf);
-  water.removeEventListener("click", SelectionWater);
-
   if (countplayers < 3) {
     if (0 < numero) {
       countnpcs += 1;
-      npc.src = "imagen/Lefeon.gif";
-      pj.src = "imagen/Flareon HIt.gif";
-      pj.classList.toggle("hitpj");
-      setTimeout(() => {
-        pj.src = "imagen/flareon.gif";
-        pj.classList.toggle("hitpj");
-        fire.addEventListener("click", SelectionFire);
-        leaf.addEventListener("click", SelectionLeaf);
-        water.addEventListener("click", SelectionWater);
-      }, 1700);
+      changeimage("Fire", "Leaf", pj);
     } else if (0 == numero) {
-      npc.src = "imagen/Flareon.gif";
-      pj.src = "imagen/Flareon.gif";
-      fire.addEventListener("click", SelectionFire);
-      leaf.addEventListener("click", SelectionLeaf);
-      water.addEventListener("click", SelectionWater);
+      changeimage("Fire", "Fire");
     } else {
       countplayers += 1;
-      npc.src = "imagen/Vaporeon Hit.gif";
-      pj.src = "imagen/Flareon.gif";
-      npc.classList.toggle("hitnpc");
-      setTimeout(() => {
-        npc.src = "imagen/Vaporeon.gif";
-        npc.classList.toggle("hitnpc");
-        fire.addEventListener("click", SelectionFire);
-        leaf.addEventListener("click", SelectionLeaf);
-        water.addEventListener("click", SelectionWater);
-      }, 1700);
+      changeimage("Fire", "Water", npc);
     }
   }
   Gamecounter();
 }
 function SelectionLeaf() {
   let numero = Math.floor(Math.random() * (2 - -1)) + -1;
-  fire.removeEventListener("click", SelectionFire);
-  leaf.removeEventListener("click", SelectionLeaf);
-  water.removeEventListener("click", SelectionWater);
-
   if (countplayers < 3) {
     if (0 < numero) {
       countnpcs += 1;
-      npc.src = "imagen/Vaporeon.gif";
-      pj.src = "imagen/Lefeon Hit.gif";
-      pj.classList.toggle("hitpj");
-      setTimeout(() => {
-        pj.src = "imagen/Lefeon.gif";
-        pj.classList.toggle("hitpj");
-        fire.addEventListener("click", SelectionFire);
-        leaf.addEventListener("click", SelectionLeaf);
-        water.addEventListener("click", SelectionWater);
-      }, 1700);
+      changeimage("Leaf", "Water", pj);
     } else if (0 == numero) {
-      npc.src = "imagen/Lefeon.gif";
-      pj.src = "imagen/Lefeon.gif";
-      fire.addEventListener("click", SelectionFire);
-      leaf.addEventListener("click", SelectionLeaf);
-      water.addEventListener("click", SelectionWater);
+      changeimage("Leaf", "Leaf");
     } else {
       countplayers += 1;
-      npc.src = "imagen/Flareon HIt.gif";
-      pj.src = "imagen/Lefeon.gif";
-      npc.classList.toggle("hitnpc");
-      setTimeout(() => {
-        npc.src = "imagen/flareon.gif";
-        npc.classList.toggle("hitnpc");
-        fire.addEventListener("click", SelectionFire);
-        leaf.addEventListener("click", SelectionLeaf);
-        water.addEventListener("click", SelectionWater);
-      }, 1700);
+      changeimage("Leaf", "Fire", npc);
     }
   }
   Gamecounter();
 }
 function SelectionWater() {
   let numero = Math.floor(Math.random() * (2 - -1)) + -1;
-  fire.removeEventListener("click", SelectionFire);
-  leaf.removeEventListener("click", SelectionLeaf);
-  water.removeEventListener("click", SelectionWater);
-
   if (countplayers < 3) {
     if (0 < numero) {
       countnpcs += 1;
-      npc.src = "imagen/Flareon.gif";
-      pj.src = "imagen/Vaporeon Hit.gif";
-      pj.classList.toggle("hitpj");
-      setTimeout(() => {
-        pj.src = "imagen/Vaporeon.gif";
-        pj.classList.toggle("hitpj");
-        fire.addEventListener("click", SelectionFire);
-        leaf.addEventListener("click", SelectionLeaf);
-        water.addEventListener("click", SelectionWater);
-      }, 1700);
+      changeimage("Water", "Fire", pj);
     } else if (0 == numero) {
-      npc.src = "imagen/Vaporeon.gif";
-      pj.src = "imagen/Vaporeon.gif";
-      fire.addEventListener("click", SelectionFire);
-      leaf.addEventListener("click", SelectionLeaf);
-      water.addEventListener("click", SelectionWater);
+      changeimage("Water", "Water");
     } else {
       countplayers += 1;
-      npc.src = "imagen/Lefeon Hit.gif";
-      pj.src = "imagen/Vaporeon.gif";
-      npc.classList.toggle("hitnpc");
-      setTimeout(() => {
-        npc.src = "imagen/Lefeon.gif";
-        npc.classList.toggle("hitnpc");
-        fire.addEventListener("click", SelectionFire);
-        leaf.addEventListener("click", SelectionLeaf);
-        water.addEventListener("click", SelectionWater);
-      }, 1700);
+      changeimage("Water", "Leaf", npc);
     }
   }
   Gamecounter();
@@ -158,9 +85,9 @@ function Gamecounter() {
       if (x > 3) {
         break;
       }
-      heartpj[x].src = "imagen/CorazonRoto.png";
+      heartpj[x].src = corazonRoto;
       if (heartpj[x - 1]) {
-        heartpj[x - 1].src = "imagen/CorazonVacio.png";
+        heartpj[x - 1].src = corazonVacio;
       }
       if (x === 3) {
         countplayers = "L";
@@ -175,7 +102,7 @@ function Gamecounter() {
         if (x > 3) {
           break;
         }
-        heartpj[x].src = "imagen/CorazonVacio.png";
+        heartpj[x].src = corazonVacio;
       }
     }, 400);
   }
@@ -189,9 +116,9 @@ function Gamecounter() {
       if (x > 3) {
         break;
       }
-      heartnpc[x].src = "imagen/CorazonRoto.png";
+      heartnpc[x].src = corazonRoto;
       if (heartnpc[x - 1]) {
-        heartnpc[x - 1].src = "imagen/CorazonVacio.png";
+        heartnpc[x - 1].src = corazonVacio;
       }
       if (x === 3) {
         countplayers = "W";
@@ -202,10 +129,28 @@ function Gamecounter() {
     setTimeout(() => {
       if (countnpc <= 3) {
         for (let x = 1; x < countnpcs + 1; x += 1) {
-          heartnpc[x].src = "imagen/CorazonVacio.png";
+          heartnpc[x].src = corazonVacio;
         }
       }
     }, 400);
+  }
+}
+function changeimage(poke, pokem, tog) {
+  const choise = index[poke + pokem];
+  pj.src = choise[0];
+  npc.src = choise[1];
+  if (tog) {
+    fire.removeEventListener("click", SelectionFire);
+    leaf.removeEventListener("click", SelectionLeaf);
+    water.removeEventListener("click", SelectionWater);
+    tog.classList.toggle("hitpj");
+    setTimeout(() => {
+      tog.src = choise[3];
+      tog.classList.toggle("hitpj");
+      fire.addEventListener("click", SelectionFire);
+      leaf.addEventListener("click", SelectionLeaf);
+      water.addEventListener("click", SelectionWater);
+    }, 1700);
   }
 }
 
@@ -214,8 +159,8 @@ function gameReset() {
     countplayers = 0;
     countnpcs = 0;
     for (let x in heartpj) {
-      heartpj[x].src = "imagen/Corazon.png";
-      heartnpc[x].src = "imagen/Corazon.png";
+      heartpj[x].src = corazon;
+      heartnpc[x].src = corazon;
     }
     blockinfo.src = "imagen/TheBattleBegins.png";
     resetGame.src = "";

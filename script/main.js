@@ -4,7 +4,7 @@ import {
   SelectionLeaf,
   gameReset,
 } from "./fieldbattle.js";
-export { fire, leaf , water};
+export { fire, leaf, water,resetGame };
 const resetGame = document.getElementById("container-resetgame-img");
 const fire = document.getElementById("container-barbutton-pj-fire");
 const leaf = document.getElementById("container-barbutton-pj-leaf");
