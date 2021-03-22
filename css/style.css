@@ -136,10 +136,12 @@ body {
   z-index: 400;
 }
 .container-resetgame-img:hover {
-  cursor: pointer;
   overflow: hidden;
   transform: scale(1.5);
   z-index: 600;
+}
+.pointer {
+  cursor: pointer;
 }
 
 /* estados de battalla */

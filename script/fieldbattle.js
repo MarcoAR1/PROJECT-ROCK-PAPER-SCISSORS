@@ -68,9 +68,11 @@ function alCounter() {
   if (countplayers === "L") {
     blockinfo.src = "imagen/YouLose.png";
     resetGame.src = "imagen/Reset.png";
+    resetGame.classList.toggle("pointer");
   } else if (countplayers === "W") {
     blockinfo.src = "imagen/YouWin.png";
     resetGame.src = "imagen/Reset.png";
+    resetGame.classList.toggle("pointer");
   }
 }
 
@@ -169,5 +171,6 @@ function gameReset() {
     }
     blockinfo.src = "imagen/TheBattleBegins.png";
     resetGame.src = "";
+    resetGame.classList.toggle("pointer");
   }
 }
