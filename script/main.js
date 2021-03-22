@@ -8,7 +8,6 @@ for (let x in element) {
 for (let x in element) {
   element[x].addEventListener("mouseover", () => {
     actions.mouseover(element[x], x);
-    console.log(actions.baseImg);
   });
 }
 for (let x in element) {
