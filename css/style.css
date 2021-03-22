@@ -62,31 +62,27 @@ body {
 }
 .container-barbutton-pj-img {
   cursor: pointer;
+  transform: scaleX(-1);
+}
+.container-barbutton-pj-img,
+.container-barbutton-npc-img {
+  padding: 0 1rem;
+  z-index: 500;
+  background-image: url("../imagen/Marco.png");
+  background-size: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .container-barbutton-pj-img:hover {
   transform: scale(1.5);
-  z-index: 600;
-}
-.container-barbutton-npc-img {
-  transform: scaleX(-1);
-}
-
-.container-barbutton-pj-img,
-.container-barbutton-npc-img {
-  width: 6rem;
-  z-index: 500;
-}
-.container-barbutton-npc-background,
-.container-barbutton-pj-background {
-  position: absolute;
 }
 .container-barbutton-npc-background {
-  margin-left: -8rem;
-  margin-top: -11.5rem;
+  margin-left: -7.5rem;
+  margin-top: -11.7rem;
 }
 .container-barbutton-pj-background {
   margin-left: -7.3rem;
-  margin-top: -10.5rem;
+  margin-top: -11.5rem;
 }
 /* counter message */
 .container-message {
@@ -106,29 +102,20 @@ body {
 .container-match-battlefield {
   display: flex;
 }
-.container-match-battlefield-img {
-  width: 8rem;
-}
+
 .container-match-battlefield-slelect {
   display: flex;
-  width: 39rem;
-  margin-top: 19rem;
+  width: 22rem;
+  height: 5rem;
+  margin-top: 22.5rem;
+  margin-left: 6rem;
   position: absolute;
-  padding: 0 0 0 3rem;
+  justify-content: space-between;
 }
-.container-match-battlefield-npc,
 .container-match-battlefield-pj {
-  width: 10rem;
-}
-.container-match-battlefield-npc {
   transform: scaleX(-1);
 }
-.container-match-battlefield-npc {
-  margin-right: auto;
-}
-.container-match-battlefield-pj {
-  margin-right: auto;
-}
+
 .container-resetgame {
   display: flex;
   justify-content: center;
@@ -147,13 +134,30 @@ body {
   z-index: 600;
 }
 
+/* estados de battalla */
+
+.container-match-battlefield-pj {
+  display: flex;
+  justify-content: center;
+}
+.container-match-battlefield-npc {
+  display: flex;
+  justify-content: center;
+}
+.hitnpc {
+  position: relative;
+  margin-left: 11rem;
+  margin-top: -5.5rem;
+}
+.hitpj {
+  position: absolute;
+  margin-top: -5.5rem;
+  margin-left: -3rem;
+}
+
 /* responsive  media*/
 
 @media screen and (max-width: 1200px) {
-  .container-barbutton-npc-background,
-  .container-barbutton-pj-background {
-    display: none;
-  }
   .container-message {
     display: block;
     margin-top: -10rem;
@@ -163,7 +167,6 @@ body {
   }
   .container-barbutton-pj,
   .container-barbutton-npc {
-    border: 0.5rem solid black;
     display: grid;
   }
   .container-tittle-img {
