@@ -109,6 +109,7 @@ body {
 }
 .container-match-battlefield {
   display: flex;
+  margin-top: -3rem;
 }
 
 .container-match-battlefield-slelect {
